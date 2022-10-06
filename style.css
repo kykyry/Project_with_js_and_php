@@ -19,9 +19,10 @@ body {
 
 select {
     font-size: 20px;
-    padding: 5px 20px;
+    padding: 3px 20px;
     cursor: pointer;
 }
+
 .sample_btn {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -31,11 +32,12 @@ select {
     background-color: #617691;
     border-radius: 4px;
     border: none;
+    cursor: pointer;
 }
 
 .sample_btn:hover {
-    background: rgb(174, 174, 174);
-    cursor: pointer;
+    background: rgb(254, 130, 130);
+    
 }
 
 .gradient__info {
