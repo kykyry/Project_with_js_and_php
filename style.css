@@ -17,11 +17,17 @@ body {
     padding: 100px 0px;
 }
 
+select {
+    font-size: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
 .sample_btn {
     font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     color: rgb(0, 0, 0);
     line-height: 52px;
-    width: 100%;
+    width: 50%;
     background-color: #617691;
     border-radius: 4px;
     border: none;
@@ -31,6 +37,11 @@ body {
     background: #fff;
 }
 
-.gradient__type, .gradient__button{
-    padding: 50px 0px;
+.gradient__info {
+    margin-bottom: 100px;
+}
+
+.gradient__type {
+    margin-bottom: 20px;
+    font-size: 20px;
 }
