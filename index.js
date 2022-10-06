@@ -2,25 +2,27 @@ function modifyBackground() {
     let block = document.querySelector(".gradient__container");
     let info = document.querySelector(".gradient__info");
 
-    console.log(document.querySelector("#type").value)
     switch (document.querySelector("#type").value) {
         case 'linear':
-            console.log('l')
-            block.style.background = 'linear-gradient(to left, #80FFDB, #5390D9)';
-            info.innerHTML = 'Background: linear-gradient(to left, #80FFDB, #5390D9)';
+            block.style.background = `linear-gradient(to left, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
+            info.innerHTML = `Background: ${block.style.background}`;
             break;
 
         case 'conic':
-            console.log('c')
-            block.style.background = 'conic-gradient(to left, #80FFDB, #5390D9)';
-            info.innerHTML = 'Background: conic-gradient(to left, #80FFDB, #5390D9)';
+            block.style.background = `conic-gradient(#${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
+            info.innerHTML = `Background: ${block.style.background}`;
             break;
 
         case 'radial':
-            console.log('r')
-            block.style.background = 'radial-gradient(to left, #80FFDB, #5390D9)';
-            info.innerHTML = 'Background: radial-gradient(to left, #80FFDB, #5390D9)';
+            block.style.background = `radial-gradient(#${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
+            info.innerHTML = `Background: ${block.style.background}`;
             break;
+    }
+
+    function getRandomInt(min, max) {
+        // min = Math.ceil(min);
+        // max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
     }
 }
 
