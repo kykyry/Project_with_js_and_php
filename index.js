@@ -6,19 +6,19 @@ function modifyBackground() {
         case 'linear':
             console.log("l")
             block.style.background = `linear-gradient(to left, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
-            info.innerHTML = `Background: linear-gradient(#${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
+            info.innerHTML = `Background: ${block.style.background}`;
             break;
 
         case 'conic':
             console.log("c")
             block.style.background = `conic-gradient(#${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
-            info.innerHTML = `Background: conic-gradient(#${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
+            info.innerHTML = `Background: ${block.style.background}`;
             break;
 
         case 'radial':
             console.log("r")
             block.style.background = `radial-gradient(#${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
-            info.innerHTML = `Background: radial-gradient(#${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
+            info.innerHTML = `Background: ${block.style.background}`;
             break;
     }
 
