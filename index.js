@@ -4,18 +4,18 @@ function modifyBackground() {
 
     switch (document.querySelector("#type").value) {
         case 'linear':
-            block.background = 'linear-gradient(to left, #80FFDB, #5390D9)';
-            info.value = 'linear-gradient(to left, #80FFDB, #5390D9)';
+            block.style.background = 'linear-gradient(to left, #80FFDB, #5390D9)';
+            info.innerHTML  = 'Background: linear-gradient(to left, #80FFDB, #5390D9)';
             break;
 
         case 'conic':
-            block.background = 'conic-gradient(to left, #80FFDB, #5390D9)';
-            info.value = 'conic-gradient(to left, #80FFDB, #5390D9)';
+            block.style.background = 'conic-gradient(to left, #80FFDB, #5390D9)';
+            info.innerHTML  = 'Background: conic-gradient(to left, #80FFDB, #5390D9)';
             break;
 
         case 'radial':
-            block.background = 'radial-gradient(to left, #80FFDB, #5390D9)';
-            info.value = 'radial-gradient(to left, #80FFDB, #5390D9)';
+            block.style.background = 'radial-gradient(to left, #80FFDB, #5390D9)';
+            info.innerHTML  = 'Background: radial-gradient(to left, #80FFDB, #5390D9)';
             break;
     }
 }
