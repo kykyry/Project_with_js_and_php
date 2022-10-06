@@ -34,7 +34,8 @@ select {
 }
 
 .sample_btn:hover {
-    background: #fff;
+    background: rgb(174, 174, 174);
+    cursor: pointer;
 }
 
 .gradient__info {
