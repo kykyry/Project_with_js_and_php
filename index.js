@@ -4,21 +4,81 @@ function modifyBackground() {
 
     switch (document.querySelector("#type").value) {
         case 'linear':
-            console.log("l")
-            block.style.background = `linear-gradient(to left, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
-            info.innerHTML = `Background: ${block.style.background}`;
+            switch (document.querySelector("#number").value) {
+                case 'two':
+                    // block.style.background = `linear-gradient(to left, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    info.innerHTML = `Background: linear-gradient(to left, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+                case 'three':
+                    info.innerHTML = `Background: linear-gradient(to left, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+                case 'four':
+                    info.innerHTML = `Background: linear-gradient(to left, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+                case 'five':
+                    info.innerHTML = `Background: linear-gradient(to left, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+            }
             break;
 
         case 'conic':
-            console.log("c")
-            block.style.background = `conic-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
-            info.innerHTML = `Background: ${block.style.background}`;
+            switch (document.querySelector("#number").value) {
+                case 'two':
+                    info.innerHTML = `Background: conic-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+                case 'three':
+                    info.innerHTML = `Background: conic-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+                case 'four':
+                    info.innerHTML = `Background: conic-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+                case 'five':
+                    info.innerHTML = `Background: conic-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+            }
+
             break;
 
         case 'radial':
-            console.log("r")
-            block.style.background = `radial-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
-            info.innerHTML = `Background: ${block.style.background}`;
+            switch (document.querySelector("#number").value) {
+                case 'two':
+                    info.innerHTML = `Background: radial-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+                case 'three':
+                    info.innerHTML = `Background: radial-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+                case 'four':
+                    info.innerHTML = `Background: radial-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+
+                case 'five':
+                    info.innerHTML = `Background: radial-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+                    block.style.background = info.innerHTML.slice(12);
+                    break;
+            }
+            // console.log("r")
+            // block.style.background = `radial-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
+            // info.innerHTML = `Background: ${block.style.background}`;
             break;
     }
 
