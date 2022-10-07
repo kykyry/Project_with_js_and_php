@@ -6,6 +6,21 @@ body {
     margin: 0;
 }
 
+header {
+    background: white;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    outline: none;
+    display: block;
+    transition: .3s ease-in-out;
+}
+.header__logo{
+    max-width: 50px;
+}
+
 .container {
     /* max-width: 1000px; */
     width: 100%;
@@ -37,7 +52,7 @@ select {
 
 .sample_btn:hover {
     background: rgb(184, 182, 182);
-    
+
 }
 
 .gradient__info {
