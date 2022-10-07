@@ -6,7 +6,6 @@ function modifyBackground() {
         case 'linear':
             switch (document.querySelector("#number").value) {
                 case 'two':
-                    // block.style.background = `linear-gradient(to left, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
                     info.innerHTML = `Background: linear-gradient(to left, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
                     block.style.background = info.innerHTML.slice(12);
                     break;
@@ -49,9 +48,7 @@ function modifyBackground() {
                     info.innerHTML = `Background: conic-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
                     block.style.background = info.innerHTML.slice(12);
                     break;
-
             }
-
             break;
 
         case 'radial':
@@ -76,9 +73,6 @@ function modifyBackground() {
                     block.style.background = info.innerHTML.slice(12);
                     break;
             }
-            // console.log("r")
-            // block.style.background = `radial-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
-            // info.innerHTML = `Background: ${block.style.background}`;
             break;
     }
 
