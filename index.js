@@ -5,25 +5,32 @@ function modifyBackground() {
     switch (document.querySelector("#type").value) {
         case 'linear':
             console.log("l")
-            block.style.background = `linear-gradient(to left, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
+            block.style.background = `linear-gradient(to left, #${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
             info.innerHTML = `Background: ${block.style.background}`;
             break;
 
         case 'conic':
             console.log("c")
-            block.style.background = `conic-gradient(#${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
+            block.style.background = `conic-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
             info.innerHTML = `Background: ${block.style.background}`;
             break;
 
         case 'radial':
             console.log("r")
-            block.style.background = `radial-gradient(#${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}, #${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)}${getRandomInt(0, 255).toString(16)})`;
+            block.style.background = `radial-gradient(#${getRandomHex()}${getRandomHex()}${getRandomHex()}, #${getRandomHex()}${getRandomHex()}${getRandomHex()})`;
             info.innerHTML = `Background: ${block.style.background}`;
             break;
     }
 
     function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+        return Math.round(Math.random() * (max - min)) + min;
+    }
+    function getRandomHex() {
+        let hexString = getRandomInt(0, 255).toString(16)
+        if (hexString.length % 2) {
+            hexString = '0' + hexString;
+        }
+        return hexString;
     }
 }
 
