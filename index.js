@@ -1,5 +1,5 @@
 function modifyBackground() {
-    let block = document.querySelector(".gradient__container");
+    let block = document.querySelector(".gradient");
     let info = document.querySelector(".gradient__info");
 
     switch (document.querySelector("#type").value) {

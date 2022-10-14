@@ -8,17 +8,86 @@ body {
 
 header {
     background: white;
-    text-align: center;
+    font-family: 'PT Mono', monospace;
+    font-size: 20px;
+    background: linear-gradient(to right, #fff, rgb(184, 182, 182), #617691);
 }
 
 header a {
     text-decoration: none;
     outline: none;
     display: block;
-    transition: .3s ease-in-out;
+    color: #000000;
+    /* transition: .3s ease-in-out; */
 }
-.header__logo{
-    max-width: 50px;
+
+header button {
+    border: none;
+    background: none;
+    color: #000000;
+    padding: 24px 0px;
+    width: 100%;
+    cursor: pointer;
+    font-size: large;
+}
+
+header button:hover,
+header button:hover a, 
+header a:hover{
+    color: #3a6eb2;
+}
+
+.header__logo {
+    padding: 10px;
+    max-height: 70px;
+    height: 100%;
+}
+
+.topmenu {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.topmenu__item {
+    position: relative;
+    padding: 0px;
+    max-height: 70px;
+    height: 100%;
+    flex: 1;
+}
+
+.topmenu__item:nth-of-type(1) {
+    flex: 3;
+    margin-left: 10px;
+}
+
+.submenu {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    background: rgb(184, 182, 182);
+    list-style: none;
+    position: absolute;
+    opacity: 0;
+    top: 100%;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: .5s ease-in-out;
+}
+
+.submenu__item {
+    padding: 5px 0px;
+}
+
+.submenu-link:hover .submenu {
+    opacity: 1;
+    transform: scaleY(1);
 }
 
 .container {
@@ -52,7 +121,6 @@ select {
 
 .sample_btn:hover {
     background: rgb(184, 182, 182);
-
 }
 
 .gradient__info {
