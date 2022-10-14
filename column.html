@@ -26,16 +26,42 @@
             <li class="topmenu__item"><button><a href="">Contacts</a></button></li>
         </ul>
     </header>
-    <div class="root">
-        <div class="el">1. У каждого объявления есть свои стили. Ублюдок, мать твою, а ну иди сюда, говно собачье, решил
-            ко мне лезть? Ты, засранец вонючий, мать твою, а?</div>
-        <div class="el">2. Их не нужно менять.</div>
-        <div class="el">3. Каждое объявление должно быть свободным по высоте. Ну иди сюда, попробуй меня трахнуть, я
-            тебя сам трахну, ублюдок, онанист чертов, будь ты проклят, иди идиот, трахать тебя и всю семью, говно
-            собачье, жлоб вонючий, дерьмо, падла, иди сюда, мерзавец, негодяй, гад, иди сюда, ты — говно, жопа!</div>
-        <div class="el">4. А вот ширину нужно будет выставить.</div>
-        <div class="el">5. Ширину элемента root, при необходимости вы можете определить, но в тестах она может быть
-            разная...
+
+    <div class="container">
+        <div class="column__number">
+            <label for="column">Choose the number of columns:</label>
+            <select id="column">
+                <option value="two" selected>2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+            </select>
+        </div>
+        <div class="column__gutters">
+            <label for="gutters">Choose the gutters between rows and columns:</label>
+            <select id="gutters">
+                <option value="ten" selected>10</option>
+                <option value="twenty">20</option>
+                <option value="thirty">30</option>
+                <option value="fourty">40</option>
+                <option value="fifty">50</option>
+            </select>
+            <span>px</span>
+        </div>
+        <button class="column__btn sample_btn">Enjoy</button>
+        <div class="root">
+            <div class="root__el" id = "el1">1. У каждого объявления есть свои стили. Ублюдок, мать твою, а ну иди сюда, говно собачье,
+                решил
+                ко мне лезть? Ты, засранец вонючий, мать твою, а?</div>
+            <div class="root__el" id = "el2">2. Их не нужно менять.</div>
+            <div class="root__el" id = "el3">3. Каждое объявление должно быть свободным по высоте. Ну иди сюда, попробуй меня трахнуть, я
+                тебя сам трахну, ублюдок, онанист чертов, будь ты проклят, иди идиот, трахать тебя и всю семью, говно
+                собачье, жлоб вонючий, дерьмо, падла, иди сюда, мерзавец, негодяй, гад, иди сюда, ты — говно, жопа!
+            </div>
+            <div class="root__el" id = "el4">4. А вот ширину нужно будет выставить.</div>
+            <div class="root__el" id = "el5">5. Ширину элемента root, при необходимости вы можете определить, но в тестах она может быть
+                разная...
+            </div>
         </div>
     </div>
     <script src="column.js"></script>
