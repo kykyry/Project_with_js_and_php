@@ -1,5 +1,5 @@
-let columnCount = 7; //Переменные, которые можно менять
-let elementGap = 100; //Переменные, которые можно менять
+let columnCount = 5; //Переменные, которые можно менять
+let elementGap = 50; //Переменные, которые можно менять
 let parentDiv = document.querySelector(".root");
 let childDiv = document.querySelectorAll(".root .el");
 let columnWidth = (window.innerWidth - (columnCount - 1)*elementGap )* 100 / (window.innerWidth*columnCount);
