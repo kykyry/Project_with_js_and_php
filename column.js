@@ -28,7 +28,7 @@ function modifyColumn() {
 
 
     // document.querySelectorAll(".root__el").forEach(element => element.style.width = `${columnWidth}%`);
-    document.querySelectorAll(".root__el").forEach(element => element.style.cssText = `margin-bottom: ${elementGap}px; width: ${columnWidth}%`);
+    document.querySelectorAll(".root__el").forEach(element => element.style.cssText = `text-align: left; margin-bottom: ${elementGap}px; width: ${columnWidth}%`);
     // for (let i = 0; i < columnCount; i++) {
     //     let newDivColumn = document.createElement('div');
     //     newDivColumn.className = "new__div";
