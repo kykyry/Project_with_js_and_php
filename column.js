@@ -2,14 +2,6 @@ function modifyColumn() {
     let columnCount; //Переменные, которые можно менять
     let elementGap; //Переменные, которые можно менять
     let parentDiv = document.querySelector(".root");
-    // let childDiv = document.querySelectorAll(".root .root__el");
-    // let columnArray = [];
-    // let min_index = 0;
-
-    // if (document.querySelectorAll(".new__div")) {
-    //     document.querySelectorAll(".root__el").forEach(element => parentDiv.appendChild(element));
-    //     document.querySelectorAll(".new__div").forEach(element => element.remove());
-    // }
 
     switch (document.querySelector("#column").value) {
         case "two": columnCount = 2; break;
@@ -24,33 +16,14 @@ function modifyColumn() {
         case "fourty": elementGap = 40; break;
         case "fifty": elementGap = 50; break;
     }
-    let columnWidth = (window.innerWidth - (columnCount - 1) * elementGap) * 100 / (window.innerWidth * columnCount);
+    // let columnWidth = (window.innerWidth - (columnCount - 1) * elementGap) * 100 / (window.innerWidth * columnCount);
 
-
-    // document.querySelectorAll(".root__el").forEach(element => element.style.width = `${columnWidth}%`);
-    document.querySelectorAll(".root__el").forEach(element => element.style.cssText = `text-align: left; margin-bottom: ${elementGap}px; width: ${columnWidth}%`);
-    // for (let i = 0; i < columnCount; i++) {
-    //     let newDivColumn = document.createElement('div');
-    //     newDivColumn.className = "new__div";
-    //     newDivColumn.id = "a" + i; //a добавлено, т.к. id начинать с цифры нельзя
-    //     newDivColumn.style.cssText = `width: ${columnWidth}%`; //float: left;
-    //     parentDiv.prepend(newDivColumn);
-    //     columnArray.push(newDivColumn);
-    // }
-
-    // for (let j = 0; j < childDiv.length; j++) {
-    //     let min_height = 1000000;
-    //     for (let i = columnArray.length - 1; i >= 0; i--) {
-    //         if (min_height > columnArray[i].offsetHeight) {
-    //             min_height = columnArray[i].offsetHeight;
-    //             min_index = i;
-    //         }
-    //     }
-    //     document.querySelector(`#a${min_index}`).appendChild(childDiv[j]);
-    // }
-
-    // document.querySelectorAll(".root__el").forEach(el => el.style.cssText = `margin-bottom: ${elementGap}px;`)
-    parentDiv.style.cssText = `display: flex; flex-wrap: wrap; justify-content: space-between;`;
+    // document.querySelectorAll(".root__el").forEach(element => element.style.cssText = `text-align: left; margin-bottom: ${elementGap}px; width: ${columnWidth}%`);
+    
+    parentDiv.style.cssText = `display: grid;
+    grid-template-columns: repeat(${columnCount}, 1fr);
+    grid-column-gap: ${elementGap}px;
+    grid-row-gap: ${elementGap}px;`;
 }
 
 let btn = document.querySelector(".column__btn");

@@ -133,3 +133,7 @@ select {
     margin-bottom: 20px;
     font-size: 20px;
 }
+
+.column__number, .column__gutters{
+    margin-bottom: 20px;
+}
