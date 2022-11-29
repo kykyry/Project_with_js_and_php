@@ -18,7 +18,6 @@ header a {
     outline: none;
     display: block;
     color: #000000;
-    /* transition: .3s ease-in-out; */
 }
 
 header button {
@@ -79,6 +78,7 @@ header a:hover{
     transform: scaleY(0);
     transform-origin: 0 0;
     transition: .5s ease-in-out;
+    z-index: -1;
 }
 
 .submenu__item {
@@ -91,7 +91,6 @@ header a:hover{
 }
 
 .container {
-    /* max-width: 1000px; */
     width: 100%;
     margin: 0px auto;
     text-align: center;
