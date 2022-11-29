@@ -16,9 +16,8 @@ function modifyColumn() {
         case "fourty": elementGap = 40; break;
         case "fifty": elementGap = 50; break;
     }
-    // let columnWidth = (window.innerWidth - (columnCount - 1) * elementGap) * 100 / (window.innerWidth * columnCount);
-
-    // document.querySelectorAll(".root__el").forEach(element => element.style.cssText = `text-align: left; margin-bottom: ${elementGap}px; width: ${columnWidth}%`);
+    
+    document.querySelectorAll(".root__el").forEach(element => element.style.cssText = `text-align: left;`);
     
     parentDiv.style.cssText = `display: grid;
     grid-template-columns: repeat(${columnCount}, 1fr);
