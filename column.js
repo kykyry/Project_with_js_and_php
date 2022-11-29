@@ -17,7 +17,7 @@ function modifyColumn() {
         case "fifty": elementGap = 50; break;
     }
     
-    document.querySelectorAll(".root__el").forEach(element => element.style.cssText = `text-align: left;`);
+    document.querySelectorAll(".root__el").forEach(element => element.style.cssText = 'text-align: left');
     
     parentDiv.style.cssText = `display: grid;
     grid-template-columns: repeat(${columnCount}, 1fr);
