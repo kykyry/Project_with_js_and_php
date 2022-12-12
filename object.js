@@ -64,8 +64,16 @@ function objectCompare(data, data2, result) {
 let el = document.querySelector(".object__button");
 const objStr1 = document.querySelector("#obj1");
 const objStr2 = document.querySelector("#obj2");
-objStr1.oninput = objectCompare((objStr1, objStr2, true));
-objStr2.oninput = objectCompare((objStr1, objStr2, true));
+objStr1.oninput = () => objectCompare((objStr1, objStr2, true));
+objStr2.oninput = () => objectCompare((objStr1, objStr2, true));
+// objStr1.oninput = function () {
+//     document.querySelector('.object__example').innerHTML
+//         += input.value;
+// }
+// objStr1.oninput = function () {
+//     document.querySelector('.object__example').innerHTML
+//         += input.value;
+// }
 
 // objStr1.oninput =  function() {let firstObj = objStr1.value}
 // objStr2.oninput =  function() {let secondObj = objStr2.value}
