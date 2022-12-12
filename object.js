@@ -65,4 +65,4 @@ let el = document.querySelector(".object__button");
 const objStr1 = document.querySelector("#obj1");
 const objStr2 = document.querySelector("#obj2");
 
-el.addEventListener("click", objectCompare(objStr1, objStr2, true), false);
+el.addEventListener("click", () => {objectCompare(objStr1, objStr2, true)}, false);
