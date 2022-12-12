@@ -63,7 +63,7 @@ function objectCompare(data, data2, result) {
 
 let el = document.querySelector(".object__button");
 const objStr1 = document.querySelector("#obj1");
-const objStr2 = document.querySelector("#obj2").value;
+const objStr2 = document.querySelector("#obj2");
 objStr1.oninput = objectCompare((objStr1, objStr2, true));
 objStr2.oninput = objectCompare((objStr1, objStr2, true));
 
