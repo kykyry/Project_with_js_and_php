@@ -136,3 +136,7 @@ select {
 .column__number, .column__gutters{
     margin-bottom: 20px;
 }
+
+.object{
+    width: 50%
+}
