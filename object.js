@@ -62,7 +62,9 @@ function objectCompare(data, data2, result) {
 }
 
 let el = document.querySelector(".object__button");
-const objStr1 = document.querySelector("#obj1").oninput;
-const objStr2 = document.querySelector("#obj2").oninput;
+const objStr1 = document.querySelector("#obj1").value;
+const objStr2 = document.querySelector("#obj2").value;
 
+// objStr1.oninput =  function() {let firstObj = objStr1.value}
+// objStr2.oninput =  function() {let secondObj = objStr2.value}
 el.addEventListener("click", () => {objectCompare(objStr1, objStr2, true)}, false);
