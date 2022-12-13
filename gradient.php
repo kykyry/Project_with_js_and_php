@@ -5,30 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=PT+Mono&family=PT+Sans&display=swap"
-        rel="stylesheet"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+
     <title>my_study_project</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="topmenu">
-                <li class="topmenu__item"><a href=""><img src="./img/logo.png" alt="logo" class="header__logo"></a></li>
-                <li class="submenu-link topmenu__item"><button>Projects</button>
-                    <ul class="submenu">
-                        <li class="submenu__item"><a href="gradient.html">Task 1 (gradient)</a></li>
-                        <li class="submenu__item"><a href="column.html">Task 2 (column)</a></li>
-                        <li class="submenu__item"><a href="index.html">Task 3 (object)</a></li>
-                    </ul>
-                </li>
-                <li class="topmenu__item"><button><a href="">Contacts</a></button></li>
-            </ul>
-        </nav>
-    </header>
+    <?php
+    include('nav.php');
+    ?>
 
     <div class="gradient container">
         <h1 class="gradient__title">Generate a random gradient background color</h1>
@@ -53,8 +39,13 @@
         <button class="gradient__button sample_btn">Enjoy</button>
     </div>
 
-    <script src="./gradient.js"></script>
+    <footer id="footer">
+        <?php
+        include('footer.php');
+        ?>
+    </footer>
 
+    <script src="./gradient.js"></script>
 </body>
 
 </html>
