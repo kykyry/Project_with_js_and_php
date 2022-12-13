@@ -1,80 +1,71 @@
-function objectCompare(data, data2, result) {
-
-    let background = document.querySelector(".objects");
+function objectCompare(obj1, obj2, result) {
+    let background = document.querySelector(".objectsBg");
+    let comment = document.querySelector(".objectComment");
 
     try {
-        let obj1 = data
-        let obj2 = data2
-
         if (typeof (obj1) === "string" && typeof (obj2) === "string") {
-            obj1 = JSON.parse(obj1);
-            obj2 = JSON.parse(obj2);
+            try {
+                comment.innerHTML = ""
+                obj1 = JSON.parse(obj1);
+                obj2 = JSON.parse(obj2);
+
+                if (typeof (obj1) !== "object" || typeof (obj2) !== "object") {
+                    comment.innerHTML = "Not correct objects";
+                    background.style.background = "white";
+                    return false;
+                }
+            }
+            catch (error) {
+                comment.innerHTML = "Not correct objects";
+                background.style.background = "white";
+                return false;
+            }
         }
 
         let arrKey1 = Object.keys(obj1);
         let arrKey2 = Object.keys(obj2);
 
-        if (!result) {
-            console.log('finish false');
-            background.style.background = "red";
-            return result
-        }
-
-        console.log(obj1, obj2, obj1.b, typeof (obj1), arrKey1.length, arrKey2.length)
-
-        if (arrKey1.length == arrKey2.length) {
+        if (arrKey1.length == arrKey2.length && obj1.length === obj2.length) { //obj1.length === obj2.length для того, чтоб отличить пустой массив ([].length = 0) от пустого объекта ({}.length = undefined)
             arrKey1.forEach(element => {
-                console.log(element)
-
                 let val1 = obj1[element];
                 let val2 = obj2[element];
+
                 if (!result) {
                     background.style.background = "red";
                     return result
                 }
 
                 if (typeof (val1) === 'object' && typeof (val2) === 'object') {
-                    console.log('ops');
                     result = objectCompare(val1, val2, result);
-                    console.log('finish ops', result)
-                } else {
-                    if (val1 != val2) {
-                        console.log(val1, val2, "not equal");
-                        result = false
-                        background.style.background = "red";
-                    } else {
-                        console.log(val1, val2, "ok")
-                    }
+                } else if (val1 != val2) {
+                    result = false
+                    background.style.background = "red";
+                    return result;
                 }
             });
-            console.log(result);
+            !result ? background.style.background = "red" : background.style.background = "green";
             return result
         } else {
             background.style.background = "red";
-            return false;
+            result = false
+            return result;
         }
 
     } catch (error) {
         console.log(error)
-        // return ('Error')
     }
 
 }
 
 let el = document.querySelector(".object__button");
-const objStr1 = document.querySelector("#obj1");
+const objStr1 = document.querySelector('#obj1');
 const objStr2 = document.querySelector("#obj2");
-objStr1.oninput = () => objectCompare((objStr1.value, objStr2.value, true));
-objStr2.oninput = () => objectCompare((objStr1.value, objStr2.value, true));
-// objStr1.oninput = function () {
-//     document.querySelector('.object__example').innerHTML
-//         += input.value;
-// }
-// objStr1.oninput = function () {
-//     document.querySelector('.object__example').innerHTML
-//         += input.value;
-// }
 
-// objStr1.oninput =  function() {let firstObj = objStr1.value}
-// objStr2.oninput =  function() {let secondObj = objStr2.value}
-// el.addEventListener("click", () => {objectCompare(objStr1, objStr2, true)}, false);
+
+objStr1.oninput = () => {
+    objectCompare(objStr1.value, objStr2.value, true);
+}
+
+objStr2.oninput = () => {
+    objectCompare(objStr1.value, objStr2.value, true);
+}

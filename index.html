@@ -20,9 +20,9 @@
                 <li class="topmenu__item"><a href=""><img src="./img/logo.png" alt="logo" class="header__logo"></a></li>
                 <li class="submenu-link topmenu__item"><button>Projects</button>
                     <ul class="submenu">
-                        <li class="submenu__item"><a href="index.html">Task 1 (gradient)</a></li>
+                        <li class="submenu__item"><a href="gradient.html">Task 1 (gradient)</a></li>
                         <li class="submenu__item"><a href="column.html">Task 2 (column)</a></li>
-                        <!-- <li class="submenu__item"><a href="object.html">Task 3 (object)</a></li> -->
+                        <li class="submenu__item"><a href="index.html">Task 3 (object)</a></li>
                     </ul>
                 </li>
                 <li class="topmenu__item"><button><a href="">Contacts</a></button></li>
@@ -30,30 +30,25 @@
         </nav>
     </header>
 
-    <div class="gradient container">
-        <h1 class="gradient__title">Generate a random gradient background color</h1>
-        <h2 class="gradient__info">Background: #fff</h2>
-        <div class="gradient__type">
-            <label for="type">Choose gradient type:</label>
-            <select id="type">
-                <option value="linear" selected>linear</option>
-                <option value="conic">conic</option>
-                <option value="radial">radial</option>
-            </select>
+    <div class="objectsBg container">
+        <h1 class="object__title">Deep object comparison</h1>
+        <h2 class="object__info">Write two objects or arrays</h2>
+        <h2 class="object__example">Example: { "a": 1, "b": { "c": 1 }, "d": [1, 2] }</h2>
+        <div class="objects">
+            <div class="object firstObj">
+                <label for="obj1">First object:</label>
+                <textarea name="obj1" id="obj1" placeholder="Don't forget these symbols: '{', ':', ',', '&quot;', '}' !"></textarea>
+                <!-- <input type="text" placeholder="Don't forget these symbols: '{', ':', ',', '&quot;' '}' !" id="obj1"> -->
+            </div>
+            <div class="object secondObj">
+                <label for="obj2">Second object:</label>
+                <textarea name="obj2" id="obj2" placeholder="Don't forget these symbols: '{', ':', ',', '&quot;', '}' !"></textarea>
+            </div>
         </div>
-        <div class="gradient__type">
-            <label for="number">Choose the number of colors:</label>
-            <select id="number">
-                <option value="two" selected>2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-                <option value="five">5</option>
-            </select>
-        </div>
-        <button class="gradient__button sample_btn">Enjoy</button>
+        <div class="objectComment"></div>
     </div>
 
-    <script src="./gradient.js"></script>
+    <script src="./object.js"></script>
 
 </body>
 
